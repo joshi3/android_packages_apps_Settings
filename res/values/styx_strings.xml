@@ -88,4 +88,7 @@
     <string name="styx_maintainer_title">@string/styx_maintainer</string>
     <string name="styx_maintainer_summary">Unknown</string>
 
+    <!-- Min refresh rate -->
+    <string name="min_refresh_rate_title">Minimum refresh rate</string>
+
 </resources>
