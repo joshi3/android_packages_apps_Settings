@@ -43,11 +43,17 @@
 
     <!-- Custom ROM version -->
     <Preference
-        android:key="custom_firmware_version"
-        android:title="@string/custom_firmware_version"
-        android:summary="@string/summary_placeholder"
-        settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.CustomFirmwareVersionPreferenceController"/>
+        android:key="styx_version"
+        android:title="@string/styx_version_title"
+        android:summary="@string/styx_version_summary"
+        settings:enableCopying="true"/>
+
+    <!-- Maintainer/s name/s -->
+    <Preference
+        android:key="styx_maintainer"
+        android:title="@string/styx_maintainer_title"
+        android:summary="@string/styx_maintainer_summary"
+        settings:enableCopying="true"/>
 
     <!-- Mainline module version -->
     <Preference
