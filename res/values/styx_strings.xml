@@ -75,6 +75,9 @@
     <string name="power_button_torch_title">Quick torch</string>
     <string name="power_button_torch_summary">When the screen is off, long-pressing power button will enable torch</string>
 
+    <!-- Battery light -->
+    <string name="battery_light_title">Turn on the light when charging</string>
+
     <!-- Styx Version -->
     <string name="styx_version">StyxOS Version</string>
     <string name="styx_version_title">@string/styx_version</string>
