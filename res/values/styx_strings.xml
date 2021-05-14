@@ -78,18 +78,14 @@
     <!-- Battery light -->
     <string name="battery_light_title">Turn on the light when charging</string>
 
-    <!-- Styx Version -->
-    <string name="styx_version">StyxOS Version</string>
-    <string name="styx_version_title">@string/styx_version</string>
-    <string name="styx_version_summary">1.3 | Athena</string>
+    <!-- Refresh rate -->
+    <string name="min_refresh_rate_title">Minimum refresh rate</string>
+    <string name="max_refresh_rate_title">Maximum refresh rate</string>
 
     <!-- Styx Maintainer -->
     <string name="styx_maintainer">Device Maintainer</string>
     <string name="styx_maintainer_title">@string/styx_maintainer</string>
     <string name="styx_maintainer_summary">Unknown</string>
 
-    <!-- Refresh rate -->
-    <string name="min_refresh_rate_title">Minimum refresh rate</string>
-    <string name="max_refresh_rate_title">Maximum refresh rate</string>
-
 </resources>
+
