@@ -512,6 +512,13 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                                 forceRoundedIcons, getMetricsCategory(), pref, tile, key,
                                 mPlaceholderPreferenceController.getOrder());
                 screen.addPreference(pref);
+		        String prefStr = pref.getKey().toString();
+		        if (prefStr.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
+		            pref.setIcon(R.drawable.ic_settings_new_wellbeing);
+		        } else if (prefStr.equals("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink")){
+		            pref.setIcon(R.drawable.ic_settings_new_gms);
+                
+                }
                 registerDynamicDataObservers(observers);
                 mDashboardTilePrefKeys.put(key, observers);
             }
