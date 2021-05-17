@@ -517,7 +517,9 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
 		            pref.setIcon(R.drawable.ic_settings_new_wellbeing);
 		        } else if (prefStr.equals("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink")){
 		            pref.setIcon(R.drawable.ic_settings_new_gms);
-                
+                } else if (prefStr.startsWith("dashboard_tile_pref_com.oneplus.extras.DeviceSettings") || prefStr.equals("dashboard_tile_pref_com.oneplus.extras.DeviceSettings") || prefStr.startsWith("dashboard_tile_pref_org.omnirom.device") || prefStr.equals("dashboard_tile_pref_org.omnirom.device") || prefStr.startsWith("dashboard_tile_pref_org.lineageos.settings.device") || prefStr.equals("dashboard_tile_pref_org.lineageos.settings") || prefStr.startsWith("dashboard_tile_pref_org.lineageos.settings") || prefStr.equals("dashboard_tile_pref_com.poco.parts") || prefStr.startsWith("dashboard_tile_pref_com.poco.parts") || prefStr.equals("dashboard_tile_pref_com.xiaomi.parts")|| prefStr.startsWith("dashboard_tile_pref_com.xiaomi.parts") || prefStr.equals("dashboard_tile_pref_com.asus.zenparts") || prefStr.startsWith("dashboard_tile_pref_com.asus.zenparts")) {
+		            // That list took me forever to compile lol
+                    pref.setIcon(R.drawable.ic_settings_new_device);
                 }
                 registerDynamicDataObservers(observers);
                 mDashboardTilePrefKeys.put(key, observers);
