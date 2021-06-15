@@ -512,14 +512,16 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                                 forceRoundedIcons, getMetricsCategory(), pref, tile, key,
                                 mPlaceholderPreferenceController.getOrder());
                 screen.addPreference(pref);
-		        String prefStr = pref.getKey().toString();
-		        if (prefStr.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")){
-		            pref.setIcon(R.drawable.ic_settings_new_wellbeing);
-		        } else if (prefStr.equals("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink")){
-		            pref.setIcon(R.drawable.ic_settings_new_gms);
-                } else if (prefStr.startsWith("dashboard_tile_pref_com.oneplus.extras.DeviceSettings") || prefStr.equals("dashboard_tile_pref_com.oneplus.extras.DeviceSettings") || prefStr.startsWith("dashboard_tile_pref_org.omnirom.device") || prefStr.equals("dashboard_tile_pref_org.omnirom.device") || prefStr.startsWith("dashboard_tile_pref_org.lineageos.settings.device") || prefStr.equals("dashboard_tile_pref_org.lineageos.settings") || prefStr.startsWith("dashboard_tile_pref_org.lineageos.settings") || prefStr.equals("dashboard_tile_pref_com.poco.parts") || prefStr.startsWith("dashboard_tile_pref_com.poco.parts") || prefStr.equals("dashboard_tile_pref_com.xiaomi.parts")|| prefStr.startsWith("dashboard_tile_pref_com.xiaomi.parts") || prefStr.equals("dashboard_tile_pref_com.asus.zenparts") || prefStr.startsWith("dashboard_tile_pref_com.asus.zenparts")) {
-		            // That list took me forever to compile lol
-                    pref.setIcon(R.drawable.ic_settings_new_device);
+                String prefStr = pref.getKey().toString();
+                if (prefStr.equals("dashboard_tile_pref_com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")) {
+                    pref.setIcon(R.drawable.ic_settings_new_wellbeing);
+                } else if (prefStr.equals("dashboard_tile_pref_com.google.android.gms.app.settings.GoogleSettingsIALink")) {
+                    pref.setIcon(R.drawable.ic_settings_new_gms);
+                }
+                for (int i = 0; i < DEVICE_PACKAGE_KEYS.length; i++) {
+                    if (prefStr.startsWith(DEVICE_PACKAGE_KEYS[i]) || prefStr.equals(DEVICE_PACKAGE_KEYS[i])) {
+                        pref.setIcon(R.drawable.ic_settings_new_device);
+                    }
                 }
                 registerDynamicDataObservers(observers);
                 mDashboardTilePrefKeys.put(key, observers);
@@ -537,6 +539,16 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
             unregisterDynamicDataObservers(entry.getValue());
         }
     }
+
+    public static final String[] DEVICE_PACKAGE_KEYS = {
+        "dashboard_tile_pref_com.oneplus.extras.DeviceSettings",
+        "dashboard_tile_pref_org.lineageos.settings.device",
+        "dashboard_tile_pref_org.lineageos.settings",
+        "dashboard_tile_pref_org.omnirom.devices",
+        "dashboard_tile_pref_com.poco.parts",
+        "dashboard_tile_pref_com.xiaomi.parts",
+        "dashboard_tile_pref_com.asus.zenparts"
+    };
 
     @Override
     public void onBlockerWorkFinished(BasePreferenceController controller) {
