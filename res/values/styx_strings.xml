@@ -108,4 +108,8 @@
     <string name="styx_updater_title">System Updater</string>
     <string name="styx_updater_summary">Styx System Updater</string>
 
+    <!-- Styx Connect -->
+    <string name="styxconnect_title">Styx Connect</string>
+    <string name="styxconnect_summary">Seamlessly connect to your PC</string>
+
 </resources>

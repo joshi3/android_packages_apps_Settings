@@ -20,13 +20,26 @@
     android:key="system_dashboard_screen"
     android:title="@string/header_category_system"
     settings:initialExpandedChildrenCount="4">
+
+    <PreferenceScreen
+        android:key="styxconnect"
+        android:title="@string/styxconnect_title"
+        android:icon="@drawable/ic_styx_connect"
+        android:order="-270"
+        android:summary="@string/styxconnect_summary">
+
+        <intent
+        android:action="android.intent.action.MAIN"
+        android:targetPackage="org.styx.styxconnect_tp"
+        android:targetClass="org.styx.styxconnect.UserInterface.MainActivity" />
+    </PreferenceScreen>
 	
     <!-- System Updater -->
     <PreferenceScreen 
 	android:key="styx_updater"
 	android:title="@string/styx_updater_title"
 	android:icon="@drawable/ic_system_update"
-	android:order="-230"
+	android:order="-30"
 	android:summary="@string/styx_updater_summary">       
 	
 	<intent
