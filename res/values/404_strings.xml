@@ -246,5 +246,9 @@
     <string name="qs_columns_portrait_title">Tiles columns on portrait</string>
     <string name="qs_columns_landscape_title">Tiles columns on landscape</string>
     <string name="qs_tile_title_visibility_title">Show tiles title</string>
+  
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G icon</string>
+    <string name="show_fourg_icon_summary">Display 4G in signal icon instead of LTE</string>
 
 </resources>

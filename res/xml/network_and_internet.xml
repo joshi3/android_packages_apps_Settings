@@ -126,4 +126,10 @@
         android:summary="@string/summary_placeholder"
         android:order="25"
         settings:controller="com.android.settings.network.AdaptiveConnectivityPreferenceController"/>
+
+    <com.p404.support.preferences.SystemSettingSwitchPreference
+        android:key="show_fourg_icon"
+        android:title="@string/show_fourg_icon_title"
+        android:summary="@string/show_fourg_icon_summary"
+        android:defaultValue="true" />
 </PreferenceScreen>
