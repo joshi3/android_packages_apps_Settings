@@ -306,4 +306,9 @@
     <string name="min_printer_summary">Printer Connections</string>
     <string name="min_nfc_summary">NFC Connections</string>
     <string name="min_cast_summary">Cast Connections</string>
+
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G icon</string>
+    <string name="show_fourg_icon_summary">Display 4G in signal icon instead of LTE</string>
+
 </resources>
